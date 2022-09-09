@@ -21,9 +21,9 @@ This is a book on the functional paradigm in general. We'll use the world's most
 That said, typed functional languages will, without a doubt, be the best place to code in the style presented by this book. JavaScript will be our means of learning a paradigm, where you apply it is up to you. Luckily, the interfaces are mathematical and, as such, ubiquitous. You'll find yourself at home with Swiftz, Scalaz, Haskell, PureScript, and other mathematically inclined environments.
 
 
-## Read it Online
+## Gitbook에서 읽어보세요
 
-For a best reading experience, [read it online via Gitbook](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/).
+최적의 가독성을 위해서, [Gitbook을 통해 읽어보세요](https://jimmy-ho-jun-lee.gitbook.io/mostly-adequate-guide-ko/).
 
 - Quick-access side-bar
 - In-browser exercises
