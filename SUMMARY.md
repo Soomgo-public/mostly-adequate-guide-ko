@@ -5,7 +5,7 @@
   * [간단하게 만나보기](ch01.md#-)
 * [Chapter 02: 일급 함수 (First Class Functions)](ch02.md)
   * [훑어보기](ch02.md#)
-  * [Why Favor First Class?](ch02.md#why-favor-first-class)
+  * [왜 일급을 선호하나요?](ch02.md#--)
 * [Chapter 03: Pure Happiness with Pure Functions](ch03.md)
   * [Oh to Be Pure Again](ch03.md#oh-to-be-pure-again)
   * [Side Effects May Include...](ch03.md#side-effects-may-include)
