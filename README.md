@@ -23,7 +23,7 @@ That said, typed functional languages will, without a doubt, be the best place t
 
 ## Gitbook에서 읽어보세요
 
-최적의 가독성을 위해서, [Gitbook을 통해 읽어보세요](https://jimmy-ho-jun-lee.gitbook.io/mostly-adequate-guide-ko/).
+최적의 가독성을 위해서, [Gitbook을 통해 읽어보세요](https://soomgo-public.gitbook.io/mostly-adequate-guide-ko/).
 
 - Quick-access side-bar
 - In-browser exercises
