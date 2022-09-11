@@ -1,11 +1,11 @@
 # Summary
 
 * [Chapter 01: 그래서 우린 대체 뭘 할건가요?](ch01.md)
-  * [소개하기](ch01.md#)
-  * [간단하게 만나보기](ch01.md#-)
+  * [소개하기](ch01.md#소개하기)
+  * [간단하게 만나보기](ch01.md#간단하게-만나보기)
 * [Chapter 02: 일급 함수 (First Class Functions)](ch02.md)
-  * [훑어보기](ch02.md#)
-  * [왜 일급을 선호하나요?](ch02.md#--)
+  * [훑어보기](ch02.md#훑어보기)
+  * [왜 일급을 선호하나요?](ch02.md#왜-일급을-선호하나요)
 * [Chapter 03: Pure Happiness with Pure Functions](ch03.md)
   * [Oh to Be Pure Again](ch03.md#oh-to-be-pure-again)
   * [Side Effects May Include...](ch03.md#side-effects-may-include)

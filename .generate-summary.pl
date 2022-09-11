@@ -18,7 +18,7 @@ if (/^## (.*)/) {
   my $anchor = lc $subheadline;
 
   # Remove all but word characters and whitespace
-  $anchor =~ s/[^\wö ]//g;
+  $anchor =~ s/[^\wö가-힣 ]//g;
   # Replace whitespace with dashes
   $anchor =~ tr/ /-/d;
 
