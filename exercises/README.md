@@ -17,7 +17,7 @@ Exercises are structured with a statement in comment, followed by an incomplete
 or incorrect function. For example, `exercise_a` from `ch04` looks like this:
 
 
-```js
+```javascript
 // Refactor to remove all arguments by partially applying the function.
 
 // words :: String -> [String]

@@ -12,161 +12,161 @@ Note that functions refer to the `curry` & `compose` functions defined in [Appen
 
 ## add 
 
-```js
+```javascript
 // add :: Number -> Number -> Number
 const add = curry((a, b) => a + b);
 ```
 
 ## append
 
-```js
+```javascript
 // append :: String -> String -> String
 const append = flip(concat);
 ```
 
 ## chain
 
-```js
+```javascript
 // chain :: Monad m => (a -> m b) -> m a -> m b
 const chain = curry((fn, m) => m.chain(fn));
 ```
 
 ## concat
 
-```js
+```javascript
 // concat :: String -> String -> String
 const concat = curry((a, b) => a.concat(b));
 ```
 
 ## eq
 
-```js
+```javascript
 // eq :: Eq a => a -> a -> Boolean
 const eq = curry((a, b) => a === b);
 ```
 
 ## filter
 
-```js
+```javascript
 // filter :: (a -> Boolean) -> [a] -> [a]
 const filter = curry((fn, xs) => xs.filter(fn));
 ```
 
 ## flip
 
-```js
+```javascript
 // flip :: (a -> b -> c) -> b -> a -> c
 const flip = curry((fn, a, b) => fn(b, a));
 ```
 
 ## forEach 
 
-```js
+```javascript
 // forEach :: (a -> ()) -> [a] -> ()
 const forEach = curry((fn, xs) => xs.forEach(fn));
 ```
 
 ## head
 
-```js
+```javascript
 // head :: [a] -> a
 const head = xs => xs[0];
 ```
 
 ## intercalate
 
-```js
+```javascript
 // intercalate :: String -> [String] -> String
 const intercalate = curry((str, xs) => xs.join(str));
 ```
 
 ## join
 
-```js
+```javascript
 // join :: Monad m => m (m a) -> m a
 const join = m => m.join();
 ```
 
 ## last
 
-```js
+```javascript
 // last :: [a] -> a
 const last = xs => xs[xs.length - 1];
 ```
 
 ## map
 
-```js
+```javascript
 // map :: Functor f => (a -> b) -> f a -> f b
 const map = curry((fn, f) => f.map(fn));
 ```
 
 ## match
 
-```js
+```javascript
 // match :: RegExp -> String -> Boolean
 const match = curry((re, str) => re.test(str));
 ```
 
 ## prop 
 
-```js
+```javascript
 // prop :: String -> Object -> a
 const prop = curry((p, obj) => obj[p]);
 ```
 
 ## reduce
 
-```js
+```javascript
 // reduce :: (b -> a -> b) -> b -> [a] -> b
 const reduce = curry((fn, zero, xs) => xs.reduce(fn, zero));
 ```
 
 ## replace
 
-```js
+```javascript
 // replace :: RegExp -> String -> String -> String
 const replace = curry((re, rpl, str) => str.replace(re, rpl));
 ```
 
 ## reverse
 
-```js
+```javascript
 // reverse :: [a] -> [a]
 const reverse = x => (Array.isArray(x) ? x.reverse() : x.split('').reverse().join(''));
 ```
 
 ## safeHead
 
-```js
+```javascript
 // safeHead :: [a] -> Maybe a
 const safeHead = compose(Maybe.of, head);
 ```
 
 ## safeLast
 
-```js
+```javascript
 // safeLast :: [a] -> Maybe a
 const safeLast = compose(Maybe.of, last);
 ```
 
 ## safeProp
 
-```js
+```javascript
 // safeProp :: String -> Object -> Maybe a
 const safeProp = curry((p, obj) => compose(Maybe.of, prop(p))(obj));
 ```
 
 ## sequence
 
-```js
+```javascript
 // sequence :: (Applicative f, Traversable t) => (a -> f a) -> t (f a) -> f (t a)
 const sequence = curry((of, f) => f.sequence(of));
 ```
 
 ## sortBy
 
-```js
+```javascript
 // sortBy :: Ord b => (a -> b) -> [a] -> [a]
 const sortBy = curry((fn, xs) => xs.sort((a, b) => {
   if (fn(a) === fn(b)) {
@@ -179,49 +179,49 @@ const sortBy = curry((fn, xs) => xs.sort((a, b) => {
 
 ## split
 
-```js
+```javascript
 // split :: String -> String -> [String]
 const split = curry((sep, str) => str.split(sep));
 ```
 
 ## take
 
-```js
+```javascript
 // take :: Number -> [a] -> [a]
 const take = curry((n, xs) => xs.slice(0, n));
 ```
 
 ## toLowerCase
 
-```js
+```javascript
 // toLowerCase :: String -> String
 const toLowerCase = s => s.toLowerCase();
 ```
 
 ## toString
 
-```js
+```javascript
 // toString :: a -> String
 const toString = String;
 ```
 
 ## toUpperCase
 
-```js
+```javascript
 // toUpperCase :: String -> String
 const toUpperCase = s => s.toUpperCase();
 ```
 
 ## traverse
 
-```js
+```javascript
 // traverse :: (Applicative f, Traversable t) => (a -> f a) -> (a -> f b) -> t a -> f (t b)
 const traverse = curry((of, fn, f) => f.traverse(of, fn));
 ```
 
 ## unsafePerformIO
 
-```js
+```javascript
 // unsafePerformIO :: IO a -> a
 const unsafePerformIO = io => io.unsafePerformIO();
 ```

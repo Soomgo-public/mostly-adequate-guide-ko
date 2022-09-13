@@ -28,7 +28,7 @@ Also, all top-level functions are curried so you don't have to worry about calli
 
 For example:
 
-```js
+```javascript
 const { Maybe, liftA2, append, concat, reverse } = require('@mostly-adequate/support');
 
 const a = Maybe.of("yltsoM").map(reverse);

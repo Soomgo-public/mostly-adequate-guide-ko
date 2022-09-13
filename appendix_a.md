@@ -11,7 +11,7 @@ Note that some functions also refer to algebraic structures defined in the [Appe
 
 ## always
 
-```js
+```javascript
 // always :: a -> b -> a
 const always = curry((a, b) => a);
 ```
@@ -19,7 +19,7 @@ const always = curry((a, b) => a);
 
 ## compose
 
-```js
+```javascript
 // compose :: ((y -> z), (x -> y),  ..., (a -> b)) -> a -> z
 const compose = (...fns) => (...args) => fns.reduceRight((res, fn) => [fn.call(null, ...res)], args)[0];
 ```
@@ -27,7 +27,7 @@ const compose = (...fns) => (...args) => fns.reduceRight((res, fn) => [fn.call(n
 
 ## curry
 
-```js
+```javascript
 // curry :: ((a, b, ...) -> c) -> a -> b -> ... -> c
 function curry(fn) {
   const arity = fn.length;
@@ -45,7 +45,7 @@ function curry(fn) {
 
 ## either
 
-```js
+```javascript
 // either :: (a -> c) -> (b -> c) -> Either a b -> c
 const either = curry((f, g, e) => {
   if (e.isLeft) {
@@ -59,7 +59,7 @@ const either = curry((f, g, e) => {
 
 ## identity
 
-```js
+```javascript
 // identity :: x -> x
 const identity = x => x;
 ```
@@ -67,7 +67,7 @@ const identity = x => x;
 
 ## inspect
 
-```js
+```javascript
 // inspect :: a -> String
 const inspect = (x) => {
   if (x && typeof x.inspect === 'function') {
@@ -102,7 +102,7 @@ const inspect = (x) => {
 
 ## left
 
-```js
+```javascript
 // left :: a -> Either a b
 const left = a => new Left(a);
 ```
@@ -110,7 +110,7 @@ const left = a => new Left(a);
 
 ## liftA2
 
-```js
+```javascript
 // liftA2 :: (Applicative f) => (a1 -> a2 -> b) -> f a1 -> f a2 -> f b
 const liftA2 = curry((fn, a1, a2) => a1.map(fn).ap(a2));
 ```
@@ -118,7 +118,7 @@ const liftA2 = curry((fn, a1, a2) => a1.map(fn).ap(a2));
 
 ## liftA3
 
-```js
+```javascript
 // liftA3 :: (Applicative f) => (a1 -> a2 -> a3 -> b) -> f a1 -> f a2 -> f a3 -> f b
 const liftA3 = curry((fn, a1, a2, a3) => a1.map(fn).ap(a2).ap(a3));
 ```
@@ -126,7 +126,7 @@ const liftA3 = curry((fn, a1, a2, a3) => a1.map(fn).ap(a2).ap(a3));
 
 ## maybe
 
-```js
+```javascript
 // maybe :: b -> (a -> b) -> Maybe a -> b
 const maybe = curry((v, f, m) => {
   if (m.isNothing) {
@@ -140,7 +140,7 @@ const maybe = curry((v, f, m) => {
 
 ## nothing
 
-```js
+```javascript
 // nothing :: Maybe a
 const nothing = Maybe.of(null);
 ```
@@ -148,7 +148,7 @@ const nothing = Maybe.of(null);
 
 ## reject 
 
-```js
+```javascript
 // reject :: a -> Task a b
 const reject = a => Task.rejected(a);
 ```
