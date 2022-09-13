@@ -11,7 +11,7 @@ Note that some methods also refer to functions defined in the [Appendix A](./app
 
 ## Compose
 
-```js
+```javascript
 const createCompose = curry((F, G) => class Compose {
   constructor(x) {
     this.$value = x;
@@ -41,7 +41,7 @@ const createCompose = curry((F, G) => class Compose {
 
 ## Either
 
-```js
+```javascript
 class Either {
   constructor(x) {
     this.$value = x;
@@ -56,7 +56,7 @@ class Either {
 
 #### Left
 
-```js
+```javascript
 class Left extends Either {
   get isLeft() {
     return true;
@@ -106,7 +106,7 @@ class Left extends Either {
 
 #### Right
 
-```js
+```javascript
 class Right extends Either {
   get isLeft() {
     return false;
@@ -156,7 +156,7 @@ class Right extends Either {
 
 ## Identity
 
-```js
+```javascript
 class Identity {
   constructor(x) {
     this.$value = x;
@@ -203,7 +203,7 @@ class Identity {
 
 ## IO
 
-```js
+```javascript
 class IO {
   constructor(fn) {
     this.unsafePerformIO = fn;
@@ -241,7 +241,7 @@ class IO {
 
 ## List
 
-```js
+```javascript
 class List {
   constructor(xs) {
     this.$value = xs;
@@ -282,7 +282,7 @@ class List {
 
 ## Map
 
-```js
+```javascript
 class Map {
   constructor(x) {
     this.$value = x;
@@ -331,7 +331,7 @@ class Map {
 > Note that `Maybe` could also be defined in a similar fashion as we did for `Either` with two 
 > child classes `Just` and `Nothing`. This is simply a different flavor.
 
-```js
+```javascript
 class Maybe {
   get isNothing() {
     return this.$value === null || this.$value === undefined;
@@ -386,7 +386,7 @@ class Maybe {
 
 ## Task
 
-```js
+```javascript
 class Task {
   constructor(fork) {
     this.fork = fork;
