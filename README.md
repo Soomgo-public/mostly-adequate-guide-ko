@@ -1,4 +1,4 @@
-[![cover](images/cover.png)](SUMMARY.md)
+[![cover](images/cover.png)](temp__.md)
 
 ## 이 책에 관하여
 
@@ -67,7 +67,7 @@ npm run generate-epub
 
 # Table of Contents
 
-See [SUMMARY.md](SUMMARY.md)
+See [SUMMARY.md](temp__.md)
 
 ### Contributing
 
